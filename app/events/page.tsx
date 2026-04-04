@@ -44,8 +44,7 @@ async function EventsContent() {
                   </span>
                 </div>
 
-                <h3 className="font-headline font-black text-2xl md:text-3xl uppercase mb-2"
-003e
+                <h3 className="font-headline font-black text-2xl md:text-3xl uppercase mb-2">
                   {event.title}
                 </h3>
 
@@ -89,8 +88,7 @@ export default function EventsPage() {
       <NoiseBackground />
       <TopNav />
 
-      <main className="relative pt-32 pb-24 px-6 md:px-12 z-10 max-w-7xl mx-auto min-h-screen"
-003e
+      <main className="relative pt-32 pb-24 px-6 md:px-12 z-10 max-w-7xl mx-auto min-h-screen">
         <SplashSplatters showTopLeft showBottomRight />
 
         {/* Header */}
