@@ -101,7 +101,7 @@ export default function EventsPage() {
           </div>
 
           <h1 className="text-6xl md:text-7xl font-black tracking-tighter uppercase mb-6"
-003e
+>
             THE <span className="text-primary-container">GIG LIST</span>
           </h1>
 
@@ -119,7 +119,7 @@ export default function EventsPage() {
             ))}
           </div>
         }
-003e
+>
           <EventsContent />
         </Suspense>
 
@@ -130,11 +130,11 @@ export default function EventsPage() {
           >
             <div>
               <h3 className="font-headline font-black text-2xl uppercase mb-2"
-003e
+>
                 Want to host an event?
               </h3>
               <p className="font-body text-on-surface-variant"
-003e
+>
                 From private parties to live performances, let's make it happen.
               </p>
             </div>
