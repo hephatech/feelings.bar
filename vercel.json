@@ -1,0 +1,14 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "next build",
+  "outputDirectory": ".next",
+  "installCommand": "pnpm install",
+  "framework": "nextjs",
+  "github": {
+    "enabled": true,
+    "silent": false
+  },
+  "env": {
+    "NEXT_PUBLIC_SITE_URL": "https://feelings-bar.vercel.app"
+  }
+}

@@ -1,0 +1,185 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Fonts */
+  --font-headline: "Space Grotesk", sans-serif;
+  --font-body: "Newsreader", serif;
+  --font-mono: "Courier Prime", monospace;
+  --font-label: "Space Grotesk", sans-serif;
+
+  /* Colors - Feelings Bar Palette */
+  --color-background: #0e0e0e;
+  --color-surface: #0e0e0e;
+  --color-surface-dim: #0e0e0e;
+  --color-surface-bright: #2c2c2c;
+  --color-surface-container: #1a1919;
+  --color-surface-container-low: #131313;
+  --color-surface-container-high: #201f1f;
+  --color-surface-container-highest: #262626;
+  --color-surface-variant: #262626;
+  
+  /* Primary - Yellow */
+  --color-primary: #ffeb92;
+  --color-primary-dim: #edce00;
+  --color-primary-container: #fddc00;
+  --color-primary-fixed: #fddc00;
+  --color-primary-fixed-dim: #edce00;
+  --color-inverse-primary: #6e5f00;
+  
+  /* Text Colors */
+  --color-on-surface: #ffffff;
+  --color-on-surface-variant: #adaaaa;
+  --color-on-background: #ffffff;
+  --color-on-primary: #645600;
+  --color-on-primary-container: #5b4e00;
+  --color-on-primary-fixed: #463b00;
+  --color-on-primary-fixed-variant: #665800;
+  
+  /* Secondary */
+  --color-secondary: #e2e2e2;
+  --color-secondary-dim: #d4d4d4;
+  --color-secondary-fixed: #e2e2e2;
+  --color-secondary-fixed-dim: #d4d4d4;
+  --color-on-secondary: #505252;
+  --color-on-secondary-fixed: #3e4040;
+  --color-on-secondary-fixed-variant: #5a5c5c;
+  --color-secondary-container: #454747;
+  --color-on-secondary-container: #d0d0d0;
+  
+  /* Tertiary */
+  --color-tertiary: #ffeb92;
+  --color-tertiary-dim: #edce00;
+  --color-tertiary-container: #fddc00;
+  --color-tertiary-fixed: #fddc00;
+  --color-tertiary-fixed-dim: #edce00;
+  --color-on-tertiary: #645600;
+  --color-on-tertiary-container: #5b4e00;
+  --color-on-tertiary-fixed: #463b00;
+  --color-on-tertiary-fixed-variant: #665800;
+  
+  /* Outline & Borders */
+  --color-outline: #767575;
+  --color-outline-variant: #484847;
+  
+  /* Error */
+  --color-error: #ff7351;
+  --color-error-dim: #d53d18;
+  --color-error-container: #b92902;
+  --color-on-error: #450900;
+  --color-on-error-container: #ffd2c8;
+  
+  /* Misc */
+  --color-inverse-surface: #fcf9f8;
+  --color-inverse-on-surface: #565555;
+  --color-surface-tint: #ffeb92;
+  --color-surface-container-lowest: #000000;
+}
+
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-headline);
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-primary-container);
+  color: #000;
+}
+
+/* Noise Background */
+.noise-bg {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.15;
+}
+
+/* Grainy Overlay */
+.grainy-overlay {
+  position: relative;
+}
+
+.grainy-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* Tape Effect */
+.tape {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(2px);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hard Shadow Box */
+.shadow-hard {
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.shadow-hard-lg {
+  box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.shadow-hard-xl {
+  box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.shadow-hard-hover:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+}
+
+/* Polaroid */
+.polaroid {
+  background: white;
+  padding: 1rem;
+  padding-bottom: 4rem;
+  box-shadow: 12px 12px 0px 0px rgba(0, 0, 0, 1);
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Typography */
+.font-headline {
+  font-family: var(--font-headline);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface-container);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-container);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
