@@ -4,7 +4,7 @@
 import { cn } from '@/lib/utils'
 
 interface PolaroidFrameProps {
-  children: React.ReactNode
+  children?: React.ReactNode
   caption?: string
   rotation?: number
   className?: string

@@ -1,28 +1,13 @@
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
-import { bookings, customers, media, navigation, pages, users } from '@hephatech/core/collections'
-import { postgresAdapter } from '@payloadcms/db-postgres'
-import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { buildConfig } from 'payload'
+import { postgresAdapter } from '@payloadcms/db-postgres'
 
-const filename = fileURLToPath(import.meta.url)
-const dirname = path.dirname(filename)
-
+// Simplified config - Payload collections will be added when needed
 export default buildConfig({
-  admin: {
-    importMap: {
-      baseDir: path.resolve(dirname),
-    },
-  },
-  collections: [users(), customers(), bookings(), media(), pages(), navigation()],
+  secret: process.env.PAYLOAD_SECRET || 'development-secret',
+  collections: [],
   db: postgresAdapter({
     pool: {
-      connectionString: process.env.DATABASE_URL || '',
+      connectionString: process.env.DATABASE_URL || 'postgres://localhost:5432/feelings_bar',
     },
   }),
-  editor: lexicalEditor(),
-  secret: process.env.PAYLOAD_SECRET || '',
-  typescript: {
-    outputFile: path.resolve(dirname, 'payload-types.ts'),
-  },
 })

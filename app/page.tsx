@@ -13,7 +13,6 @@ import { TopNav } from '@/app/sections/top-nav'
 import { SideNav } from '@/app/sections/side-nav'
 import { BottomNav } from '@/app/sections/bottom-nav'
 import { HeroSection } from '@/app/sections/hero-section'
-import { FeaturedSection } from '@/app/sections/featured-section'
 
 // Loading component for Suspense
 function SectionLoader() {
