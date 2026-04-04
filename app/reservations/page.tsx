@@ -21,13 +21,13 @@ export default function ReservationsPage() {
         {/* Modal Heading Section */}
         <div className="mb-8 relative">
           <h2 className="font-headline font-black text-5xl text-primary-container uppercase tracking-tighter leading-none -rotate-2">
-            SNAG A <br/> TABLE
+            PRENOTA <br/> UN TAVOLO
           </h2>
           <div className="absolute -right-2 -top-4 transform rotate-12">
             <span className="material-symbols-outlined text-hot-pink text-5xl">sell</span>
           </div>
           <p className="font-mono text-sm mt-4 opacity-80 max-w-[200px]">
-            Grab your spot in the void. No refunds. No regrets.
+            Agarra tu spot nel vuoto. No rimborsi. No rimpianti.
           </p>
         </div>
 
@@ -37,16 +37,16 @@ export default function ReservationsPage() {
             <div className="aspect-square bg-surface-container-highest overflow-hidden relative">
               <img
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLNhd0uZJ3ogZ0sBfO_xXE9nxkuGFH5NMutGOZjmrob00HLvQnL8dcqQ-_wHsH5NW3hivSHRrN1VPzloSzzPQumouPUhXkMEmYhO5BK7RoK5Tsy3lfjXLAJPLyoA4GfpnkrNE9WKxNu_qlGzzESYxuDtXj5PYuXjTE4VfIpzaiLh2epR28t0oGYMC2yPhREqjUIQMmaOcJO7RRcFqESh9ygYjJam1FA11xuZuJCCxxxnZiM_NwXr5hWNSvwo8kH4d93v6-rjQZ7jP3"
-                alt="Interior of the bar booth"
+                alt="Interno del bar"
                 className="w-full h-full object-cover grayscale contrast-125"
               />
               <div className="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
             </div>
             <p className="absolute bottom-2 left-4 font-mono text-black text-xs italic">
-              Booth #4 - The Deep End
+              Tavolo #4 - Il Deep End
             </p>
             <div className="absolute -top-4 -right-4 bg-secondary-container/80 px-4 py-1 transform rotate-12 text-[10px] font-mono text-white border border-white/20">
-              RESERVED
+              RISERVATO
             </div>
           </div>
         </div>
@@ -56,12 +56,12 @@ export default function ReservationsPage() {
           <div className="flex items-center gap-2 mb-4">
             <span className="material-symbols-outlined text-hot-pink">event</span>
             <h3 className="font-headline font-bold uppercase tracking-tight text-xl pink-scribble inline-block">
-              Pick a Date
+              Scegli Data
             </h3>
           </div>
           <div className="bg-surface-container-low p-6 jagged-border shadow-[0_8px_0_0_rgba(0,0,0,1)]">
             <div className="grid grid-cols-7 gap-1 text-center font-mono text-[10px] opacity-60 mb-2">
-              <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+              <span>L</span><span>M</span><span>M</span><span>G</span><span>V</span><span>S</span><span>D</span>
             </div>
             <div className="grid grid-cols-7 gap-2">
               <div className="py-2 text-xs font-mono opacity-20">12</div>
@@ -90,7 +90,7 @@ export default function ReservationsPage() {
           <div className="flex items-center gap-2 mb-4">
             <span className="material-symbols-outlined text-hot-pink">schedule</span>
             <h3 className="font-headline font-bold uppercase tracking-tight text-xl pink-scribble inline-block">
-              Select Time
+              Scegli Orario
             </h3>
           </div>
           <div className="flex flex-wrap gap-4">
@@ -113,7 +113,7 @@ export default function ReservationsPage() {
         {/* Guest Count */}
         <section className="mb-12">
           <label className="font-mono text-xs uppercase opacity-60 block mb-2">
-            How many souls?
+            Quante anime?
           </label>
           <div className="flex items-center gap-6 border-b-2 border-white/20 pb-4">
             <button
@@ -135,17 +135,18 @@ export default function ReservationsPage() {
         </section>
 
         {/* Confirm Button: High Contrast Caution Sticker */}
-        <button className="w-full bg-primary-container text-black py-6 px-4 font-headline font-black text-2xl uppercase tracking-widest shadow-[8px_8px_0_0_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all relative overflow-hidden group">
+        <button className="w-full bg-primary-container text-black py-6 px-4 font-headline font-black text-2xl uppercase tracking-widest shadow-[8px_8px_0_0_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all relative overflow-hidden group"
+        >
           <div className="absolute inset-0 bg-black/5 group-active:bg-black/20"></div>
           <div className="flex justify-between items-center relative z-10">
             <span className="material-symbols-outlined">warning</span>
-            <span>CONFIRM BOOKING</span>
+            <span>CONFERMA</span>
             <span className="material-symbols-outlined">chevron_right</span>
           </div>
         </button>
 
         <p className="text-center font-mono text-[10px] uppercase mt-8 opacity-40">
-          By confirming, you agree to exist within the feelings bar ecosystem.
+          Confermando, accetti di esistere nell'ecosistema feelings bar.
         </p>
       </main>
 

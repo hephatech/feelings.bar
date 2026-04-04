@@ -13,15 +13,15 @@ export function SideNav() {
       <nav className="flex flex-col flex-1 font-mono text-sm tracking-tight">
         <Link href="/archive" className="text-white opacity-70 hover:opacity-100 px-4 py-2 mx-2 mb-1 flex items-center gap-3 hover:bg-primary-container/10">
           <span className="material-symbols-outlined text-xs">folder_open</span>
-          Archive
+          Archivio
         </Link>
         <Link href="/gallery" className="text-white opacity-70 hover:opacity-100 px-4 py-2 mx-2 mb-1 flex items-center gap-3 hover:bg-primary-container/10">
           <span className="material-symbols-outlined text-xs">photo_library</span>
-          Gallery
+          Galleria
         </Link>
         <Link href="/playlists" className="text-white opacity-70 hover:opacity-100 px-4 py-2 mx-2 mb-1 flex items-center gap-3 hover:bg-primary-container/10">
           <span className="material-symbols-outlined text-xs">queue_music</span>
-          Playlists
+          Playlist
         </Link>
         <Link href="/newsletter" className="text-white opacity-70 hover:opacity-100 px-4 py-2 mx-2 mb-1 flex items-center gap-3 hover:bg-primary-container/10">
           <span className="material-symbols-outlined text-xs">mail</span>
@@ -29,12 +29,13 @@ export function SideNav() {
         </Link>
         <Link href="/contact" className="text-white opacity-70 hover:opacity-100 px-4 py-2 mx-2 mb-1 flex items-center gap-3 hover:bg-primary-container/10">
           <span className="material-symbols-outlined text-xs">chat_bubble</span>
-          Contact
+          Contatti
         </Link>
       </nav>
       
       <div className="px-6 py-4 mt-auto">
-        <div className="bg-primary-container text-black p-2 text-[10px] font-bold font-mono rotate-2 shadow-hard">
+        <div className="bg-primary-container text-black p-2 text-[10px] font-bold font-mono rotate-2 shadow-hard"
+        >
           © FEELINGS BAR 2024
         </div>
       </div>

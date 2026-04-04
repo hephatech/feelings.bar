@@ -33,7 +33,7 @@ export function UploadModal({ isOpen, onClose }: UploadModalProps) {
 
         {/* Headline */}
         <h1 className="font-headline font-black text-4xl italic tracking-tighter uppercase text-primary-fixed mb-8 leading-none">
-          JOIN THE MESS
+          UNISCITI AL CAOS
         </h1>
 
         {/* The Polaroid Artifact */}
@@ -47,7 +47,7 @@ export function UploadModal({ isOpen, onClose }: UploadModalProps) {
             <div className="absolute inset-0 flex flex-col items-center justify-center text-on-surface">
               <span className="material-symbols-outlined text-4xl mb-2">add_a_photo</span>
               <p className="font-headline font-bold text-xs tracking-widest uppercase bg-black text-white px-2 py-1">
-                TAP TO EXPOSE
+                TAP PER SCATTARE
               </p>
             </div>
           </div>
@@ -55,7 +55,7 @@ export function UploadModal({ isOpen, onClose }: UploadModalProps) {
           <div className="absolute bottom-4 left-6 right-6">
             <div className="border-b border-black/10 w-full mb-1"></div>
             <p className="font-mono text-black/40 text-[10px] uppercase tracking-tighter italic">
-              DEVELOPING...
+              IN SVILUPPO...
             </p>
           </div>
 
@@ -66,13 +66,13 @@ export function UploadModal({ isOpen, onClose }: UploadModalProps) {
         <div className="mt-10 space-y-6">
           <div className="relative">
             <label className="block font-headline font-bold text-[10px] tracking-widest text-primary-fixed uppercase mb-2">
-              Sharpie Caption
+              Didascalia Sharpie
             </label>
             <input
               type="text"
               value={caption}
               onChange={(e) => setCaption(e.target.value)}
-              placeholder="SCRAWL SOMETHING HERE..."
+              placeholder="SCRIVI QUALCOSA QUI..."
               className="w-full bg-transparent border-0 border-b-2 border-outline-variant text-on-surface font-mono focus:ring-0 focus:border-primary-fixed scribble-underline placeholder:text-on-surface-variant/30 uppercase"
             />
           </div>
@@ -85,13 +85,14 @@ export function UploadModal({ isOpen, onClose }: UploadModalProps) {
               type="text"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
-              placeholder="THE BAR BASEMENT"
+              placeholder="IL BAR SOTTERRANEO"
               className="w-full bg-transparent border-0 border-b-2 border-outline-variant text-on-surface font-mono focus:ring-0 focus:border-primary-fixed scribble-underline placeholder:text-on-surface-variant/30 uppercase"
             />
           </div>
 
-          <button className="w-full mt-4 bg-primary-container text-on-primary-fixed font-headline font-black text-xl py-4 tracking-tighter uppercase shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-y-1 transition-all">
-            SUBMIT
+          <button className="w-full mt-4 bg-primary-container text-on-primary-fixed font-headline font-black text-xl py-4 tracking-tighter uppercase shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-y-1 transition-all"
+          >
+            INVIA
           </button>
         </div>
 

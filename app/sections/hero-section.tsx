@@ -7,25 +7,26 @@ export function HeroSection() {
       <div className="lg:col-span-5 flex flex-col gap-8 order-2 lg:order-1">
         <div className="relative inline-block self-start rotate-[-2deg]">
           <span className="bg-primary-container text-black px-4 py-2 text-sm font-mono font-bold shadow-hard uppercase">
-            EST. 2024 / VOL. 01
+            APERTO 2024 / VOL. 01
           </span>
         </div>
         
         <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.85] uppercase">
-          DRINK YOUR <br/>
-          <span className="text-primary-container">FEELINGS</span> <br/>
-          LOUDLY.
+          BERE I TUOI <br/>
+          <span className="text-primary-container">SENTIMENTI</span> <br/>
+          FORTE.
         </h1>
         
         <p className="font-body text-xl md:text-2xl leading-relaxed max-w-md italic opacity-90">
-          A multi-sensory dive into the analog artifacts of our collective memory. 
-          This is not just a bar; it's a living journal of every late night and early morning.
+          Fried chicken fatto in casa come da nonna, cocktails che raccontano storie,
+          e quel calore dominicano che ti abbraccia appena entri. This is not just a bar;
+          è un diario vivente di ogni serata che finisce troppo tardi.
         </p>
         
         <div className="flex flex-wrap gap-4 mt-4">
           <div className="bg-surface-container-highest p-4 rotate-[1deg] shadow-hard max-w-xs">
-            <p className="font-mono text-xs opacity-70 mb-2">// CURRENT STATE</p>
-            <p className="font-headline font-bold text-lg uppercase leading-tight">Mood: High Octane & Nostalgic</p>
+            <p className="font-mono text-xs opacity-70 mb-2">// STATO ATTUALE</p>
+            <p className="font-headline font-bold text-lg uppercase leading-tight">Mood: High Octane & Nostalgico</p>
           </div>
         </div>
       </div>
@@ -38,9 +39,9 @@ export function HeroSection() {
           
           <PolaroidFrame
             rotation={3}
-            caption="SATURDAY NIGHT ARTIFACT #042"
+            caption="ARTEFATTO SABATO SERA #042"
             imageUrl="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80"
-            imageAlt="Moody dark bar interior with neon lighting"
+            imageAlt="Interno bar con neon"
           />
           
           {/* Scribble Arrow */}
@@ -57,7 +58,7 @@ export function HeroSection() {
             rotation={-5}
             className="absolute -bottom-4 -left-12"
           >
-            SNAG A TABLE
+            PRENOTA ORA
           </StickerButton>
         </div>
 

@@ -28,7 +28,7 @@ async function EventsContent() {
                     {new Date(event.date).getDate()}
                   </div>
                   <div className="font-mono text-xs uppercase font-bold">
-                    {new Date(event.date).toLocaleDateString('en-US', { month: 'short' })}
+                    {new Date(event.date).toLocaleDateString('it-IT', { month: 'short' })}
                   </div>
                 </div>
               </div>
@@ -64,13 +64,13 @@ async function EventsContent() {
                     )}
                     <button className="bg-primary-container text-black font-headline font-bold text-sm px-4 py-2 shadow-hard hover:translate-y-0.5 transition-transform uppercase"
                     >
-                      Get Tickets
+                      Prendi Biglietto
                     </button>
                   </div>
                 ) : (
                   <span className="font-mono text-xs uppercase text-on-surface-variant"
                   >
-                    Free Entry
+                    Ingresso Gratis
                   </span>
                 )}
               </div>
@@ -101,13 +101,13 @@ export default function EventsPage() {
           </div>
 
           <h1 className="text-6xl md:text-7xl font-black tracking-tighter uppercase mb-6"
->
-            THE <span className="text-primary-container">GIG LIST</span>
+          >
+            GLI <span className="text-primary-container">EVENTI</span>
           </h1>
 
           <p className="font-body text-xl max-w-2xl italic opacity-80">
-            Late nights, live music, and the collective buzz of shared moments.
-            Check what's coming up and mark your calendar.
+            Sere lunghe, musica dal vivo, e quel collective buzz dei momenti condivisi.
+            Check what's coming up e segna il calendario.
           </p>
         </div>
 
@@ -119,7 +119,7 @@ export default function EventsPage() {
             ))}
           </div>
         }
->
+        >
           <EventsContent />
         </Suspense>
 
@@ -130,16 +130,16 @@ export default function EventsPage() {
           >
             <div>
               <h3 className="font-headline font-black text-2xl uppercase mb-2"
->
-                Want to host an event?
+              >
+                Vuoi hostare un evento?
               </h3>
               <p className="font-body text-on-surface-variant"
->
-                From private parties to live performances, let's make it happen.
+              >
+                Da private parties a live performances, let's make it happen.
               </p>
             </div>
             <StickerButton href="/contact" rotation={2}>
-              GET IN TOUCH
+              CONTATTACI
             </StickerButton>
           </div>
         </div>

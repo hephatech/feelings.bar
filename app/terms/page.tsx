@@ -6,27 +6,27 @@ import { BottomNav } from '@/app/sections/bottom-nav'
 const rules = [
   {
     number: '01',
-    title: 'WHAT HAPPENS AT THE BAR...',
+    title: 'QUELLO CHE ACCADE AL BAR...',
     description:
-      "Stays on the wall. Your photos are artifacts of a moment. We don't sell 'em to suit-and-tie types, but once they're pinned, they're part of the vibe. You own the rights, we own the gallery license.",
+      "Resta sul muro. Le tue foto sono artefatti di un momento. Non le vendiamo a uomini in giacca e cravatta, ma una volta appuntate, fanno parte del vibe. Tu hai i diritti, noi abbiamo la galleria license.",
   },
   {
     number: '02',
-    title: 'NO CREEPS ALLOWED',
+    title: 'NO CREEPY PEOPLE',
     description:
-      "This is a community, not a dark alley. Respect the privacy of others. Don't pin photos of people who didn't give you the nod. If you act like a jerk, we'll tear your whole profile down like old wallpaper.",
+      "Questa è una community, non un vicolo buio. Rispetta la privacy degli altri. Non mettere foto di gente che non ti ha dato il consenso. Se ti comporti da jerk, ti cancelliamo come vecchia carta da parati.",
   },
   {
     number: '03',
-    title: 'RAW EMOTION ONLY',
+    title: 'SOLO EMOZIONI RAW',
     description:
-      "We're here for the grit, the grain, and the late-night scrawls. AI-generated junk or corporate spam will be incinerated on sight. Keep it analog, even if it's digital.",
+      "Siamo qui per il grano, la grain e gli scarabocchi di notte. Roba AI-generated o corporate spam verrà incenerita. Keep it analog, anche se è digital.",
   },
   {
     number: '04',
-    title: 'DATA DUMPS',
+    title: 'I DATI',
     description:
-      'We track your vibe to make the app better. No weird surveillance, just enough to know if the music is too loud or the lighting is just right. Check the settings if you want to go ghost.',
+      "Tracciamo il tuo vibe per migliorare l'app. No weird surveillance, solo abbastanza per sapere se la musica è troppo alta o la luce è giusta. Check settings se vuoi andare ghost.",
   },
 ]
 
@@ -59,7 +59,7 @@ export default function TermsPage() {
             {/* Paper Content */}
             <div className="relative z-10 pl-8 notebook-lines">
               <h2 className="font-headline font-black text-5xl mb-12 tracking-tighter uppercase italic border-b-4 border-black inline-block">
-                THE RULES
+                LE REGOLE
               </h2>
 
               <div className="font-mono space-y-8 text-sm md:text-base leading-relaxed">
@@ -75,11 +75,13 @@ export default function TermsPage() {
 
               {/* Button Scraps */}
               <div className="mt-16 flex flex-col md:flex-row gap-6 justify-end items-center">
-                <button className="bg-[#0D0D0D] text-white font-headline font-bold text-xl px-10 py-4 paper-tear-left transform -rotate-2 hover:scale-105 transition-transform hover:bg-primary-container hover:text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.2)]">
-                  NOT TODAY
+                <button className="bg-[#0D0D0D] text-white font-headline font-bold text-xl px-10 py-4 paper-tear-left transform -rotate-2 hover:scale-105 transition-transform hover:bg-primary-container hover:text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.2)]"
+                >
+                  NON OGGI
                 </button>
-                <button className="bg-primary-container text-black font-headline font-black text-2xl px-12 py-5 paper-tear-right transform rotate-3 hover:scale-110 transition-transform shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-y-1 active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-                  I'M IN
+                <button className="bg-primary-container text-black font-headline font-black text-2xl px-12 py-5 paper-tear-right transform rotate-3 hover:scale-110 transition-transform shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-y-1 active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+                >
+                  CI STO
                 </button>
               </div>
             </div>

@@ -73,36 +73,36 @@ export interface SiteMetadata {
 
 export const siteMetadata: SiteMetadata = {
   name: 'FEELINGS BAR',
-  tagline: 'DRINK YOUR FEELINGS LOUDLY',
-  description: 'A multi-sensory dive into the analog artifacts of our collective memory.',
-  address: 'Tucked away in the concrete cracks of the city',
+  tagline: 'DOVE I SENTIMENTI HANNO GUSTO',
+  description: 'Fried chicken fatto in casa, cocktails che raccontano storie, e quel feeling di famiglia dominicana che ti avvolge come un abbraccio.',
+  address: 'In mezzo al caos della città',
   phone: '+1 (555) 123-4567',
-  email: 'hello@feelings.bar',
+  email: 'ciao@feelings.bar',
   social: {
     instagram: '@feelings.bar',
     facebook: 'feelingsbar',
     twitter: '@feelingsbar',
   },
   hours: {
-    monday: 'Closed',
-    tuesday: '6pm - 2am',
-    wednesday: '6pm - 2am',
-    thursday: '6pm - 3am',
-    friday: '6pm - 4am',
-    saturday: '6pm - 4am',
-    sunday: '6pm - 12am',
+    monday: 'Chiuso - ci riposiamo',
+    tuesday: '18:00 - 02:00',
+    wednesday: '18:00 - 02:00',
+    thursday: '18:00 - 03:00',
+    friday: '18:00 - 04:00',
+    saturday: '18:00 - 04:00',
+    sunday: '18:00 - 00:00',
   },
 }
 
 export const cocktails: Cocktail[] = [
   {
     id: '1',
-    slug: 'midnight-regret',
-    name: 'Midnight Regret',
-    description: 'A bittersweet symphony of bourbon, smoked maple, and dark chocolate bitters. For the nights that blur into mornings.',
+    slug: 'mezzanotte-senza-rimorso',
+    name: 'Mezzanotte Senza Rimorso',
+    description: 'Bourbon, sciroppo d\'acero affumicato e bitter al cioccolato fondente. Per le notti che diventano mornings.',
     price: 18,
     currency: '$',
-    ingredients: ['Bourbon', 'Smoked Maple Syrup', 'Dark Chocolate Bitters', 'Orange Peel'],
+    ingredients: ['Bourbon', 'Sciroppo d\'Acero Affumicato', 'Bitter al Cioccolato', 'Scorza d\'Arancia'],
     category: 'signature',
     mood: 'Melancholic',
     abv: '24%',
@@ -110,12 +110,12 @@ export const cocktails: Cocktail[] = [
   },
   {
     id: '2',
-    slug: 'golden-hour-bliss',
-    name: 'Golden Hour Bliss',
-    description: 'Tequila kissed by turmeric and honey, topped with prosecco. Captures that perfect moment before sunset.',
+    slug: 'golden-hour-dolce-vita',
+    name: 'Golden Hour Dolce Vita',
+    description: 'Tequila baciata dalla curcuma e dal miele, top con prosecco. Quel momento perfetto prima del tramonto.',
     price: 16,
     currency: '$',
-    ingredients: ['Tequila', 'Turmeric', 'Honey', 'Prosecco', 'Lemon'],
+    ingredients: ['Tequila', 'Curcuma', 'Miele', 'Prosecco', 'Limone'],
     category: 'signature',
     mood: 'Euphoric',
     abv: '18%',
@@ -123,12 +123,12 @@ export const cocktails: Cocktail[] = [
   },
   {
     id: '3',
-    slug: 'neon-melancholy',
-    name: 'Neon Melancholy',
-    description: 'Gin infused with butterfly pea flower, elderflower, and a spark of citrus. Changes color as you sip.',
+    slug: 'malinconia-neon',
+    name: 'Malinconia Neon',
+    description: 'Gin infuso con fiore di pisello e sambuco, con una scintilla di citrus. Cambia colore mentre lo sorseggi.',
     price: 17,
     currency: '$',
-    ingredients: ['Gin', 'Butterfly Pea Flower', 'Elderflower Liqueur', 'Lemon', 'Soda'],
+    ingredients: ['Gin', 'Fiore di Pisello', 'Liquore di Sambuco', 'Limone', 'Soda'],
     category: 'signature',
     mood: 'Contemplative',
     abv: '20%',
@@ -136,12 +136,12 @@ export const cocktails: Cocktail[] = [
   },
   {
     id: '4',
-    slug: 'old-fashioned',
-    name: 'Analog Old Fashioned',
-    description: 'The classic, unapologetically unchanged. Bourbon, sugar, bitters, and time.',
+    slug: 'old-fashioned-analogico',
+    name: 'Old Fashioned Analogico',
+    description: 'Il classico, senza scuse. Bourbon, zucchero, bitter e tempo. Come faceva nonno.',
     price: 15,
     currency: '$',
-    ingredients: ['Bourbon', 'Demerara Sugar', 'Angostura Bitters', 'Orange'],
+    ingredients: ['Bourbon', 'Zucchero Demerara', 'Angostura Bitter', 'Arancia'],
     category: 'classic',
     mood: 'Nostalgic',
     abv: '32%',
@@ -149,12 +149,12 @@ export const cocktails: Cocktail[] = [
   },
   {
     id: '5',
-    slug: 'virgin-sunrise',
-    name: 'Virgin Sunrise',
-    description: 'All the vibes, none of the buzz. Orange, grenadine, and a secret blend of spices.',
+    slug: 'alba-virgin',
+    name: 'Alba Virgin',
+    description: 'Tutte le vibes, zero sbornia. Arancia, granatina e un blend segreto di spezie.',
     price: 10,
     currency: '$',
-    ingredients: ['Orange Juice', 'Grenadine', 'Spice Blend', 'Soda'],
+    ingredients: ['Succo d\'Arancia', 'Granatina', 'Blend di Spezie', 'Soda'],
     category: 'mocktail',
     mood: 'Bright',
     available: true,
@@ -164,9 +164,9 @@ export const cocktails: Cocktail[] = [
 export const events: Event[] = [
   {
     id: '1',
-    slug: 'lofi-sunday',
-    title: 'Lo-Fi Sundays',
-    description: 'Vinyl selectors spinning chill beats while you unwind. Bring your sketchbook, your journal, or just your thoughts.',
+    slug: 'lofi-domenica',
+    title: 'Lo-Fi Domenica',
+    description: 'Vinili selezionati, beats rilassati e zero stress. Porta il tuo sketchbook, il tuo journal, o semplicemente i tuoi pensieri.',
     date: '2024-04-07',
     time: '18:00 - 23:00',
     type: 'dj-set',
@@ -175,9 +175,9 @@ export const events: Event[] = [
   },
   {
     id: '2',
-    slug: 'jazz-jam-thursday',
-    title: 'Jazz Jam Thursdays',
-    description: 'Live improvisational jazz. Local musicians welcome to join the jam.',
+    slug: 'jazz-jam-giovedi',
+    title: 'Jazz Jam Giovedì',
+    description: 'Jazz improvvisato live. Musicisti locali welcome to join the jam - porta il tuo strumento!',
     date: '2024-04-11',
     time: '20:00 - 01:00',
     type: 'live-music',
@@ -187,9 +187,9 @@ export const events: Event[] = [
   },
   {
     id: '3',
-    slug: 'cocktail-workshop',
-    title: 'Cocktail Craft Workshop',
-    description: 'Learn the art of mixology. This week: Infusions and bitters. Take home your own bitters kit.',
+    slug: 'workshop-cocktail',
+    title: 'Workshop: L\'Arte del Cocktail',
+    description: 'Impara l\'arte della mixology. Questa settimana: Infusi e bitter. Porta a casa il tuo kit personalizzato.',
     date: '2024-04-15',
     time: '17:00 - 19:00',
     type: 'workshop',
@@ -209,8 +209,6 @@ const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
 export async function getCocktails(): Promise<Cocktail[]> {
   // TODO: Replace with PayloadCMS call
-  // const payload = await getPayloadClient()
-  // return payload.find({ collection: 'cocktails' })
   await delay(800)
   return cocktails
 }

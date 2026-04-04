@@ -14,7 +14,7 @@ async function MenuContent() {
     <>
       {/* Category Filters */}
       <div className="flex flex-wrap gap-3 mb-12">
-        {['All', 'Signature', 'Classic', 'Mocktail'].map((filter, i) => (
+        {['Tutti', 'Signature', 'Classici', 'Mocktail'].map((filter, i) => (
           <button
             key={filter}
             className={`px-4 py-2 font-mono text-sm font-bold uppercase transition-all ${
@@ -120,12 +120,12 @@ export default function MenuPage() {
           </div>
 
           <h1 className="text-6xl md:text-7xl font-black tracking-tighter uppercase mb-6">
-            THE <span className="text-primary-container">STASH</span>
+            LA <span className="text-primary-container">SCORTA</span>
           </h1>
 
           <p className="font-body text-xl max-w-2xl italic opacity-80">
-            Distilled emotions served in chilled glassware. Each cocktail tells a story,
-            each sip unlocks a memory.
+            Emozioni distillate servite in bicchieri ghiacciati. Ogni cocktail racconta una storia,
+            ogni sorso sblocca un ricordo.
           </p>
         </div>
 
@@ -136,14 +136,15 @@ export default function MenuPage() {
               <div key={i} className="h-64 bg-surface-container rounded-lg" />
             ))}
           </div>
-        }>
+        }
+        >
           <MenuContent />
         </Suspense>
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <StickerButton href="/reservations" rotation={-3}>
-            BOOK A TABLE
+            PRENOTA UN TAVOLO
           </StickerButton>
         </div>
       </main>

@@ -23,7 +23,7 @@ export function TopNav() {
           Menu
         </Link>
         <Link href="/events" className="text-white hover:text-primary-container transition-transform hover:scale-105">
-          Events
+          Eventi
         </Link>
         <Link href="/community" className="text-white hover:text-primary-container transition-transform hover:scale-105">
           Community
@@ -31,7 +31,8 @@ export function TopNav() {
       </nav>
       
       <div className="flex items-center gap-4">
-        <button className="material-symbols-outlined text-primary-container text-3xl hover:scale-110 transition-transform">
+        <button className="material-symbols-outlined text-primary-container text-3xl hover:scale-110 transition-transform"
+        >
           account_circle
         </button>
         
@@ -49,7 +50,7 @@ export function TopNav() {
           <nav className="flex flex-col p-6 font-headline font-bold tracking-tighter uppercase">
             <Link href="/" className="py-3 text-primary-container">Home</Link>
             <Link href="/menu" className="py-3 text-white">Menu</Link>
-            <Link href="/events" className="py-3 text-white">Events</Link>
+            <Link href="/events" className="py-3 text-white">Eventi</Link>
             <Link href="/community" className="py-3 text-white">Community</Link>
           </nav>
         </div>

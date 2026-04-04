@@ -33,7 +33,7 @@ async function CocktailsSection() {
     <section className="mt-24">
       <div className="flex items-center gap-4 mb-8">
         <div className="bg-primary-container text-black px-4 py-2 font-mono font-bold text-sm shadow-hard rotate-[-2deg]">
-          THE MENU
+          IL MENU
         </div>
         <div className="h-px bg-outline-variant flex-1"></div>
       </div>
@@ -78,7 +78,7 @@ async function CocktailsSection() {
           href="/menu"
           className="inline-block font-headline font-bold uppercase hover:underline decoration-primary-container decoration-4 underline-offset-4"
         >
-          View Full Menu →
+          Vedi il Menu Completo →
         </Link>
       </div>
     </section>
@@ -94,7 +94,7 @@ async function EventsSection() {
     <section className="mt-24">
       <div className="flex items-center gap-4 mb-8">
         <div className="bg-primary-container text-black px-4 py-2 font-mono font-bold text-sm shadow-hard rotate-[1deg]">
-          UPCOMING EVENTS
+          PROSSIMI EVENTI
         </div>
         <div className="h-px bg-outline-variant flex-1"></div>
       </div>
@@ -145,23 +145,23 @@ export default function HomePage() {
         <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
           <ScrapbookCard
             entryNumber="Entry 001"
-            title="The Menu"
-            description="Distilled emotions served in chilled glassware. From 'Midnight Regret' to 'Golden Hour Bliss'."
+            title="Il Menu"
+            description="Emozioni distillate servite in bicchieri ghiacciati. Dal 'Mezzanotte Senza Rimorso' al 'Golden Hour Dolce Vita'."
             href="/menu"
-            linkText="Read the specs →"
+            linkText="Scopri di più →"
             variant="primary"
           />
           
           <ScrapbookCard
             entryNumber="Entry 002"
-            title="The Vibe"
-            description="Lo-fi beats, high-fidelity flavors. A space designed to be felt, not just seen."
+            title="Il Vibe"
+            description="Beats lo-fi, sapori high-fidelity. Uno spazio pensato per essere sentito, non solo visto."
           />
           
           <ScrapbookCard
             entryNumber="Entry 003"
-            title="Location"
-            description="Tucked away in the concrete cracks of the city. Look for the yellow light."
+            title="Dove Siamo"
+            description="Nascosto tra le crepe del cemento della città. Cerca la luce gialla."
           />
         </div>
         
