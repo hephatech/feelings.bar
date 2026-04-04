@@ -121,7 +121,7 @@ export default function CommunityPage() {
                 alt={polaroid.alt}
                 caption={polaroid.caption}
                 rotation={0}
-                aspectRatio={polaroid.aspect || 'square'}
+                aspectRatio={(polaroid.aspect as 'square' | 'portrait' | 'video' | 'four-five') || 'square'}
                 tape={polaroid.tape ? 'custom' : 'none'}
                 customTape={polaroid.tape ? (
                   <CustomTape 
