@@ -44,3 +44,4 @@ generated-types.ts
 
 # OS
 Thumbs.db
+.env.stitch
