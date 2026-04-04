@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { NoiseBackground } from '@/components'
+import { NoiseBackground, ScrapbookCardV2, Polaroid } from '@/components'
 import { UploadModal } from '@/app/components/upload-modal'
 import { TopNav } from '@/app/sections/top-nav'
 import { SideNav } from '@/app/sections/side-nav'
@@ -23,7 +23,7 @@ const polaroids = [
     translateY: 8,
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDkbEwQsS45twJv5ObTh2ejEl4I7wwBRQoC74UKP9G3ZiIqPruEzGm93eG9-klKTfpjM5mszlf4TVSdxObXKFtdboOKNVPrlVMXkujK9PzPxZTfh0ORSvs1xuuIE5vOnF4MhC40nghIs8Z4RcrdpzsVmN5SO6eKw-2-VzNXYM28_qc01D9jXj4BG2J7DZsTbaykZSpJ6-xEIe6rfnUy7nePxIaCXOs6WWoD9jvbBz7vXno33NFD06h6ECXD-Z88uVVjttzVFpuAkuMU',
     alt: 'Mural de graffiti',
-    aspect: 'aspect-[4/5]',
+    aspect: 'four-five',
     tape: { top: true, right: 4, rotate: -15 },
   },
   {
@@ -42,7 +42,7 @@ const polaroids = [
     translateY: -12,
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCYYGpfoWLZbxmHtgFQeIOQKBbjFKpJBM10wRX89pnseIpZluqclc4VVUjXJqldNRI5ajTtmsnT5mqe4GNtQtUbDCmdWNMd8cl5vimcPNPI9SiRs4xLeA3SqnzmhpaWlC53C41xgYshEwE2TpRVsK_KOoMoeQrk60fZEwaRtozwbvL3FEw_LnqHU7wBrw0r6l2buhva1fBWhWrw37sbbyZJls-Z_3wv-PkBwm48OZZHCPX8l0pv0KTIml0lN7IIGnndW4fVmQhZzeeV',
     alt: 'Interior del bar con neón',
-    aspect: 'aspect-[3/4]',
+    aspect: 'portrait',
   },
   {
     id: 5,
@@ -62,6 +62,24 @@ const polaroids = [
   },
 ]
 
+function CustomTape({ position, rotate }: { position: string | number; rotate: number }) {
+  const leftStyle = position === '1/2' 
+    ? 'left-1/2 -translate-x-1/2' 
+    : typeof position === 'number' 
+      ? `left-[${position * 4}px]` 
+      : ''
+  
+  return (
+    <div
+      className={`absolute w-24 h-8 masking-tape z-10 ${leftStyle}`}
+      style={{ 
+        top: '-16px',
+        transform: `rotate(${rotate}deg)`,
+      }}
+    />
+  )
+}
+
 export default function CommunityPage() {
   const [isUploadOpen, setIsUploadOpen] = useState(false)
 
@@ -71,18 +89,25 @@ export default function CommunityPage() {
       <TopNav />
 
       <main className="relative pt-24 pb-32 px-4 md:px-12 max-w-7xl mx-auto min-h-screen z-10">
-        {/* Section Title Overlay */}
+        {/* Section Title */}
         <div className="relative z-10 mb-12">
-          <h1 className="text-7xl md:text-9xl font-black font-headline italic tracking-tighter text-white uppercase mix-blend-difference">
+          <h1 className="text-7xl md:text-9xl font-black font-headline italic tracking-tighter text-white uppercase mix-blend-difference"
+          >
             IL MURO
           </h1>
-          <div className="absolute -top-4 -right-4 md:right-20 bg-primary-container text-on-primary-container px-6 py-2 rotate-[3deg] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] font-headline font-bold text-xl uppercase">
-            Diario di Comunità
-          </div>
+          <ScrapbookCardV2
+            variant="primary"
+            shadow="md"
+            rotation={3}
+            className="absolute -top-4 -right-4 md:right-20 !px-6 !py-2"
+          >
+            <span className="font-headline font-bold text-xl uppercase">Diario di Comunità</span>
+          </ScrapbookCardV2>
         </div>
 
-        {/* Polaroid Masonry Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start relative">
+        {/* Polaroid Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start relative"
+        >
           {polaroids.map((polaroid) => (
             <div
               key={polaroid.id}
@@ -91,41 +116,31 @@ export default function CommunityPage() {
                 transform: `rotate(${polaroid.rotation}deg) ${polaroid.translateY ? `translateY(${polaroid.translateY * 4}px)` : ''}`,
               }}
             >
-              {/* Tape Effect */}
-              {polaroid.tape && (
-                <div
-                  className="absolute w-24 h-8 masking-tape z-10"
-                  style={{
-                    top: polaroid.tape.top ? '-16px' : undefined,
-                    bottom: polaroid.tape.bottom ? '-16px' : undefined,
-                    left: polaroid.tape.left === '1/2' ? '50%' : typeof polaroid.tape.left === 'number' ? `${polaroid.tape.left * 4}px` : undefined,
-                    right: typeof polaroid.tape.right === 'number' ? `${polaroid.tape.right * 4}px` : undefined,
-                    transform: `translateX(${polaroid.tape.left === '1/2' ? '-50%' : '0'}) rotate(${polaroid.tape.rotate || 0}deg)`,
-                  }}
-                />
-              )}
-
-              {/* Polaroid Card */}
-              <div className="bg-white p-4 pb-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                <div className={`${polaroid.aspect || 'aspect-square'} bg-surface-container overflow-hidden relative polaroid-inner-glow`}>
-                  <img
-                    src={polaroid.image}
-                    alt={polaroid.alt}
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                  />
-                </div>
-                <div className="mt-6 font-marker text-2xl text-black text-center">
-                  {polaroid.caption}
-                </div>
-              </div>
+              <Polaroid
+                imageUrl={polaroid.image}
+                alt={polaroid.alt}
+                caption={polaroid.caption}
+                rotation={0} /* Rotation applied by parent */
+                aspectRatio={polaroid.aspect || 'square'}
+                tape={polaroid.tape ? 'custom' : 'none'}
+                customTape={polaroid.tape ? (
+                  <CustomTape 
+                    position={polaroid.tape.left || polaroid.tape.right || '1/2'} 
+                    rotate={polaroid.tape.rotate || 0} 
+                  /
+                ) : undefined}
+                grayscale
+                className="w-full"
+              />
             </div>
           ))}
         </div>
       </main>
 
-      {/* Floating Sticker Action */}
-      <div className="fixed bottom-24 right-6 md:bottom-12 md:right-12 z-50 group">
-        <button 
+      {/* Floating Sticker */}
+      <div className="fixed bottom-24 right-6 md:bottom-12 md:right-12 z-50 group"
+      >
+        <button
           onClick={() => setIsUploadOpen(true)}
           className="w-32 h-32 md:w-48 md:h-48 bg-primary-container text-black font-headline font-black text-xl md:text-2xl rounded-full flex items-center justify-center p-6 text-center leading-none uppercase rotate-[-12deg] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] group-hover:scale-110 group-hover:rotate-0 transition-all cursor-pointer"
         >
@@ -133,7 +148,6 @@ export default function CommunityPage() {
         </button>
       </div>
 
-      {/* Upload Modal */}
       <UploadModal isOpen={isUploadOpen} onClose={() => setIsUploadOpen(false)} />
 
       <SideNav />
