@@ -120,14 +120,14 @@ export default function CommunityPage() {
                 imageUrl={polaroid.image}
                 alt={polaroid.alt}
                 caption={polaroid.caption}
-                rotation={0} /* Rotation applied by parent */
+                rotation={0}
                 aspectRatio={polaroid.aspect || 'square'}
                 tape={polaroid.tape ? 'custom' : 'none'}
                 customTape={polaroid.tape ? (
                   <CustomTape 
                     position={polaroid.tape.left || polaroid.tape.right || '1/2'} 
                     rotate={polaroid.tape.rotate || 0} 
-                  /
+                  />
                 ) : undefined}
                 grayscale
                 className="w-full"
