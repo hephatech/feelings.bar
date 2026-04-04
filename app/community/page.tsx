@@ -1,5 +1,8 @@
-import Link from 'next/link'
+'use client'
+
+import { useState } from 'react'
 import { NoiseBackground } from '@/components'
+import { UploadModal } from '@/app/components/upload-modal'
 import { TopNav } from '@/app/sections/top-nav'
 import { SideNav } from '@/app/sections/side-nav'
 import { BottomNav } from '@/app/sections/bottom-nav'
@@ -60,12 +63,14 @@ const polaroids = [
 ]
 
 export default function CommunityPage() {
+  const [isUploadOpen, setIsUploadOpen] = useState(false)
+
   return (
     <>
       <NoiseBackground />
       <TopNav />
 
-      <main className="relative pt-24 pb-32 px-4 md:px-12 max-w-7xl mx-auto min-h-screen">
+      <main className="relative pt-24 pb-32 px-4 md:px-12 max-w-7xl mx-auto min-h-screen z-10">
         {/* Section Title Overlay */}
         <div className="relative z-10 mb-12">
           <h1 className="text-7xl md:text-9xl font-black font-headline italic tracking-tighter text-white uppercase mix-blend-difference">
@@ -120,10 +125,16 @@ export default function CommunityPage() {
 
       {/* Floating Sticker Action */}
       <div className="fixed bottom-24 right-6 md:bottom-12 md:right-12 z-50 group">
-        <button className="w-32 h-32 md:w-48 md:h-48 bg-primary-container text-black font-headline font-black text-xl md:text-2xl rounded-full flex items-center justify-center p-6 text-center leading-none uppercase rotate-[-12deg] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] group-hover:scale-110 group-hover:rotate-0 transition-all cursor-pointer">
+        <button 
+          onClick={() => setIsUploadOpen(true)}
+          className="w-32 h-32 md:w-48 md:h-48 bg-primary-container text-black font-headline font-black text-xl md:text-2xl rounded-full flex items-center justify-center p-6 text-center leading-none uppercase rotate-[-12deg] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] group-hover:scale-110 group-hover:rotate-0 transition-all cursor-pointer"
+        >
           ADD YOUR FACE
         </button>
       </div>
+
+      {/* Upload Modal */}
+      <UploadModal isOpen={isUploadOpen} onClose={() => setIsUploadOpen(false)} />
 
       <SideNav />
       <BottomNav />
