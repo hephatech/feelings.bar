@@ -29,3 +29,7 @@ export { Ticket } from './ticket'
 export { Polaroid } from './polaroid'
 export { SectionHeader } from './section-header'
 export { Marquee } from './marquee'
+
+// NEW: Page-specific components
+export { GalleryGrid } from './gallery-grid'
+export { LocationMap } from './location-map'

@@ -1,4 +1,4 @@
-import { NoiseBackground, ScrapbookCardV2 } from '@/components'
+import { NoiseBackground, ScrapbookCardV2, GalleryGrid, LocationMap } from '@/components'
 import SplashSplatters from '@/components/splash-splatters'
 import { TopNav } from '@/app/sections/top-nav'
 import { SideNav } from '@/app/sections/side-nav'
@@ -227,6 +227,12 @@ export default function HomePage() {
             </ScrapbookCardV2>
           </div>
         </section>
+
+        {/* Gallery Grid - Official Masonry Layout */}
+        <GalleryGrid />
+
+        {/* Location Map with Official Address */}
+        <LocationMap />
 
         {/* CTA Section */}
         <section className="px-4 py-24 text-center">
