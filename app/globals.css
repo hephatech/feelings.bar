@@ -281,3 +281,41 @@ body {
   background-image: repeating-linear-gradient(transparent, transparent 31px, #d1d5db 31px, #d1d5db 32px);
   background-size: 100% 32px;
 }
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+/* Tape Effect for Menu */
+.tape-effect {
+  background: rgba(253, 220, 0, 0.4);
+  backdrop-filter: blur(2px);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Scribble Underline */
+.scribble-underline {
+  background-image: url("data:image/svg+xml,%3Csvg width='200' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 15 Q 50 5, 100 15 T 195 15' stroke='%23000' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-bottom: 8px;
+}
+
+/* Ripped Edge Top */
+.ripped-edge-top {
+  clip-path: polygon(
+    0% 15%, 5% 0%, 10% 12%, 15% 3%, 20% 18%, 25% 1%, 30% 14%, 35% 6%, 
+    40% 19%, 45% 2%, 50% 15%, 55% 5%, 60% 20%, 65% 3%, 70% 17%, 75% 1%, 
+    80% 15%, 85% 4%, 90% 18%, 95% 2%, 100% 15%, 100% 100%, 0% 100%
+  );
+}
