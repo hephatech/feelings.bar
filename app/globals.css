@@ -296,6 +296,14 @@ body {
   animation: marquee 20s linear infinite;
 }
 
+.animate-marquee-slow {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee-fast {
+  animation: marquee 10s linear infinite;
+}
+
 /* Tape Effect for Menu */
 .tape-effect {
   background: rgba(253, 220, 0, 0.4);
@@ -344,6 +352,21 @@ body {
     radial-gradient(circle at 100% 50%, transparent 10px, black 11px);
   -webkit-mask-size: 100% 100%, 20px 20px;
   -webkit-mask-position: 0 0, 100% 0;
+  -webkit-mask-repeat: no-repeat, repeat-y;
+}
+
+.ticket-jagged-left {
+  mask-image: 
+    linear-gradient(to left, black calc(100% - 15px), transparent 100%),
+    radial-gradient(circle at 0% 50%, transparent 10px, black 11px);
+  mask-size: 100% 100%, 20px 20px;
+  mask-position: 0 0, 0 0;
+  mask-repeat: no-repeat, repeat-y;
+  -webkit-mask-image: 
+    linear-gradient(to left, black calc(100% - 15px), transparent 100%),
+    radial-gradient(circle at 0% 50%, transparent 10px, black 11px);
+  -webkit-mask-size: 100% 100%, 20px 20px;
+  -webkit-mask-position: 0 0, 0 0;
   -webkit-mask-repeat: no-repeat, repeat-y;
 }
 
