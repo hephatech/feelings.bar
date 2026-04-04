@@ -91,11 +91,11 @@ export default function CommunityPage() {
                 <div
                   className="absolute w-24 h-8 masking-tape z-10"
                   style={{
-                    top: polaroid.tape.top ? '-16px' : polaroid.tape.bottom ? undefined : undefined,
+                    top: polaroid.tape.top ? '-16px' : undefined,
                     bottom: polaroid.tape.bottom ? '-16px' : undefined,
-                    left: polaroid.tape.left === '1/2' ? '50%' : polaroid.tape.left < 0 ? `${polaroid.tape.left * 4}px` : polaroid.tape.left ? `${polaroid.tape.left * 4}px` : undefined,
-                    right: polaroid.tape.right ? `${polaroid.tape.right * 4}px` : undefined,
-                    transform: `translateX(${polaroid.tape.left === '1/2' ? '-50%' : '0'}) rotate(${polaroid.tape.rotate}deg)`,
+                    left: polaroid.tape.left === '1/2' ? '50%' : typeof polaroid.tape.left === 'number' ? `${polaroid.tape.left * 4}px` : undefined,
+                    right: typeof polaroid.tape.right === 'number' ? `${polaroid.tape.right * 4}px` : undefined,
+                    transform: `translateX(${polaroid.tape.left === '1/2' ? '-50%' : '0'}) rotate(${polaroid.tape.rotate || 0}deg)`,
                   }}
                 />
               )}
