@@ -5,7 +5,7 @@ interface ScrapbookCardProps {
   children: ReactNode
   rotation?: number
   className?: string
-  variant?: 'default' | 'primary' | 'dark' | 'white'
+  variant?: 'default' | 'primary' | 'dark' | 'white' | 'secondary'
   shadow?: 'sm' | 'md' | 'lg' | 'xl'
   jaggedEdge?: 'none' | 'right' | 'left'
   paperTexture?: boolean
@@ -16,6 +16,7 @@ const variantStyles = {
   primary: 'bg-primary-container text-black',
   dark: 'bg-surface-container-highest border-4 border-white text-white',
   white: 'bg-white text-black',
+  secondary: 'bg-secondary-container text-on-secondary-container',
 }
 
 const shadowStyles = {
